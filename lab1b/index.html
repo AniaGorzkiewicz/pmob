@@ -15,19 +15,17 @@
     <canvas id="myCanvas" width="578" height="200"></canvas>
     <script>
       var canvas = document.getElementById('myCanvas');
-      canvas.width = 800;
-      canvas.height = 600;
       var context = canvas.getContext('2d');
       var col = "green";
       var centerX = canvas.width / 2;
       var centerY = canvas.height / 2;
-  
+      var radius = 70;
 
       drawCircle();
       setInterval(drawCircle,1000);
       function drawCircle(){
         context.beginPath();
-        context.arc(centerX, centerY, 50, 0, 2 * Math.PI, false);
+        context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
         if(col =="green")
         {
           col="blue"
