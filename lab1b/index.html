@@ -14,17 +14,29 @@
   <body>
     <canvas id="myCanvas" width="578" height="200"></canvas>
     <script>
-
       var canvas = document.getElementById('myCanvas');
-      var context = canvas.getContext('2d');
-      var centerX = canvas.width / 2;
-      var centerY = canvas.height / 2;
-      var radius = 70;
+      canvas.width = 800;
+      canvas.height = 600;
+      
+      var c = canvas.getContext('2d');
+      var col = "green";
+  
 
-      context.beginPath();
-      context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
-      context.fillStyle = 'green';
-      context.fill();
+      drawCircle();
+      setInterval(drawCircle,1000);
+      function drawCircle(){
+        c.beginPath();
+        c.arc(100, 75, 50, 0, 2 * Math.PI, false);
+        if(col =="green")
+        {
+          col="blue"
+        }else{
+          col="green"
+        }
+        c.fillStyle = col;
+        c.fill();
+        c.stroke();
+      }
   
 
 //       function main(circleColor) {
