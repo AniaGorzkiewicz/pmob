@@ -11,6 +11,7 @@
       }
     </style>
   </head>
+  
   <body>
     <canvas id="myCanvas" width="578" height="200"></canvas>
     <script>
@@ -29,7 +30,8 @@
     var colorArray = [ 'green', 'blue']
   }
 var changeColor = setInterval(function() {
-
+//gradient
+  //0,green,255 - green 
   //let bckColor = colorArray[Math.floor(Math.random() * 7 + 1)];
   let circleColor = colorArray[Math.floor(Math.random() * 7 + 1)];
   main(bckColor, circleColor)
