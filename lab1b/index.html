@@ -14,7 +14,7 @@
   <body>
     <canvas id="myCanvas" width="578" height="200"></canvas>
     <script>
-      function main(bckColor, circleColor) {
+      function main(circleColor) {
   var canvas = document.getElementsByTagName("CANVAS")[0],
     ctx = canvas.getContext("2d");
   if (canvas.height) {
@@ -25,7 +25,7 @@
   var cW = canvas.width,
     cH = canvas.height;
   
-  ctx.fillStyle = bckColor || "#000";
+  
   //ctx.fillStyle = "red" ;
   ctx.fillRect(0, 0, cW, cH);
   ctx.fill();
@@ -38,10 +38,10 @@
   ctx.fill();
   ctx.closePath();
 }
-var colorArray = ['red', 'green', 'yellow', 'blue', 'pink', 'brown', 'orange']
+var colorArray = [ 'green', 'blue']
 var changeColor = setInterval(function() {
 
-  let bckColor = colorArray[Math.floor(Math.random() * 7 + 1)];
+  //let bckColor = colorArray[Math.floor(Math.random() * 7 + 1)];
   let circleColor = colorArray[Math.floor(Math.random() * 7 + 1)];
   main(bckColor, circleColor)
 
