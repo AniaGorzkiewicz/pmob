@@ -14,6 +14,7 @@
   <body>
     <canvas id="myCanvas" width="578" height="200"></canvas>
     <script>
+      function main(circleColor) {
       var canvas = document.getElementById('myCanvas');
       var context = canvas.getContext('2d');
       var centerX = canvas.width / 2;
@@ -24,6 +25,16 @@
       context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
       context.fillStyle = 'green';
       context.fill();
+
+    var colorArray = [ 'green', 'blue']
+  }
+var changeColor = setInterval(function() {
+
+  //let bckColor = colorArray[Math.floor(Math.random() * 7 + 1)];
+  let circleColor = colorArray[Math.floor(Math.random() * 7 + 1)];
+  main(bckColor, circleColor)
+
+}, 2000)
     </script>
   </body>
 </html> 
