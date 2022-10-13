@@ -17,6 +17,7 @@
       var canvas = document.getElementById('myCanvas');
       var context = canvas.getContext('2d');
       var col = "green";
+      //context.fillStyle = "blue";
       var centerX = canvas.width / 2;
       var centerY = canvas.height / 2;
       var radius = 70;
@@ -32,9 +33,10 @@
         }else{
           col="green"
         }
-        //context.fillStyle = col;
-        context.fillStyle = `rgb(0,${green},${255-green})`;
+        context.fillStyle = col;
+        //context.fillStyle = `rgb(0,${green},${255-green})`;
         context.fill();
+        
         context.stroke();
       }
   
